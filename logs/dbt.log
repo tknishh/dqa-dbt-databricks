@@ -1,0 +1,234 @@
+
+
+============================== 2022-11-24 12:45:40.149911 | 965b81b7-db6c-42ab-8697-6d57d8f9bf2d ==============================
+[0m12:45:40.149911 [info ] [MainThread]: Running with dbt=1.3.1
+[0m12:45:40.150903 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': 'C:\\Users\\Tedd\\.dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'skip_profile_setup': False, 'which': 'init', 'indirect_selection': 'eager'}
+[0m12:45:40.151907 [debug] [MainThread]: Tracking: tracking
+[0m12:45:40.163903 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F9383E1750>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F9383E11B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F9383E1390>]}
+[0m12:45:40.164906 [info ] [MainThread]: Creating dbt configuration folder at C:\Users\Tedd\.dbt
+[0m12:46:32.301728 [debug] [MainThread]: Starter project path: C:\Users\Tedd\.virtualenvs\dqa-dbt-databricks-WuttffiD\lib\site-packages\dbt\include\starter_project
+[0m18:34:58.867627 [info ] [MainThread]: Profile dqa_dbt_databricks_project written to C:\Users\Tedd\.dbt\profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m18:34:58.917076 [info ] [MainThread]: 
+Your new dbt project "dqa_dbt_databricks_project" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m18:34:58.940080 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F9383E1DB0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F9383E0670>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F9383E23E0>]}
+[0m18:34:58.966074 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2022-11-24 18:38:02.044797 | 7a89d0b1-987b-436a-b68c-f507f08edb25 ==============================
+[0m18:38:02.044797 [info ] [MainThread]: Running with dbt=1.3.1
+[0m18:38:02.045809 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': 'C:\\Users\\Tedd\\.dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'config_dir': False, 'which': 'debug', 'indirect_selection': 'eager'}
+[0m18:38:02.045809 [debug] [MainThread]: Tracking: tracking
+[0m18:38:02.062309 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000176523B25C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000176523B2E30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000176523B09D0>]}
+[0m18:38:05.286024 [debug] [MainThread]: Executing "git --help"
+[0m18:38:05.306551 [debug] [MainThread]: Acquiring new databricks connection "debug"
+[0m18:38:05.306551 [debug] [MainThread]: Using databricks connection "debug"
+[0m18:38:05.307551 [debug] [MainThread]: On debug: select 1 as id
+[0m18:38:05.307551 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m18:38:10.106323 [debug] [MainThread]: Databricks adapter: Error while running:
+select 1 as id
+[0m18:38:10.107330 [debug] [MainThread]: Databricks adapter: <class 'databricks.sql.exc.ServerOperationError'>: Catalog 'dqa-dbt-dbks' plugin class not found: spark.sql.catalog.dqa-dbt-dbks is not defined
+[0m18:38:10.107330 [debug] [MainThread]: Databricks adapter: diagnostic-info: org.apache.hive.service.cli.HiveSQLException: Error running query: org.apache.spark.sql.connector.catalog.CatalogNotFoundException: Catalog 'dqa-dbt-dbks' plugin class not found: spark.sql.catalog.dqa-dbt-dbks is not defined
+	at org.apache.spark.sql.hive.thriftserver.HiveThriftServerErrors$.runningQueryError(HiveThriftServerErrors.scala:49)
+	at org.apache.spark.sql.hive.thriftserver.SparkExecuteStatementOperation.$anonfun$execute$1(SparkExecuteStatementOperation.scala:443)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at com.databricks.unity.EmptyHandle$.runWith(UCSHandle.scala:41)
+	at org.apache.spark.sql.hive.thriftserver.SparkExecuteStatementOperation.org$apache$spark$sql$hive$thriftserver$SparkExecuteStatementOperation$$execute(SparkExecuteStatementOperation.scala:356)
+	at org.apache.spark.sql.hive.thriftserver.SparkExecuteStatementOperation$$anon$2$$anon$3.$anonfun$run$2(SparkExecuteStatementOperation.scala:269)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at org.apache.spark.sql.hive.thriftserver.ThriftLocalProperties.withLocalProperties(ThriftLocalProperties.scala:149)
+	at org.apache.spark.sql.hive.thriftserver.ThriftLocalProperties.withLocalProperties$(ThriftLocalProperties.scala:49)
+	at org.apache.spark.sql.hive.thriftserver.SparkExecuteStatementOperation.withLocalProperties(SparkExecuteStatementOperation.scala:54)
+	at org.apache.spark.sql.hive.thriftserver.SparkExecuteStatementOperation$$anon$2$$anon$3.run(SparkExecuteStatementOperation.scala:247)
+	at org.apache.spark.sql.hive.thriftserver.SparkExecuteStatementOperation$$anon$2$$anon$3.run(SparkExecuteStatementOperation.scala:232)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:422)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1878)
+	at org.apache.spark.sql.hive.thriftserver.SparkExecuteStatementOperation$$anon$2.run(SparkExecuteStatementOperation.scala:281)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: org.apache.spark.sql.connector.catalog.CatalogNotFoundException: Catalog 'dqa-dbt-dbks' plugin class not found: spark.sql.catalog.dqa-dbt-dbks is not defined
+	at org.apache.spark.sql.errors.QueryExecutionErrors$.catalogPluginClassNotFoundError(QueryExecutionErrors.scala:1791)
+	at org.apache.spark.sql.connector.catalog.Catalogs$.load(Catalogs.scala:63)
+	at org.apache.spark.sql.connector.catalog.SecureCatalogManager.assertCatalogLoadable(SecureCatalogManager.scala:44)
+	at org.apache.spark.sql.connector.catalog.SecureCatalogManager.assertCatalogLoadable$(SecureCatalogManager.scala:40)
+	at org.apache.spark.sql.connector.catalog.CatalogManager.assertCatalogLoadable(CatalogManager.scala:40)
+	at org.apache.spark.sql.connector.catalog.CatalogManager.catalog(CatalogManager.scala:54)
+	at com.databricks.sql.DatabricksCatalogManager.catalog(DatabricksCatalogManager.scala:96)
+	at org.apache.spark.sql.connector.catalog.CatalogManager.currentCatalog(CatalogManager.scala:127)
+	at com.databricks.sql.DatabricksCatalogManager.currentCatalog(DatabricksCatalogManager.scala:114)
+	at org.apache.spark.sql.connector.catalog.CatalogManager.currentNamespace(CatalogManager.scala:98)
+	at com.databricks.sql.DatabricksCatalogManager.currentNamespace(DatabricksCatalogManager.scala:147)
+	at org.apache.spark.sql.catalyst.optimizer.ReplaceCurrentLike.apply(finishAnalysis.scala:109)
+	at org.apache.spark.sql.catalyst.optimizer.ReplaceCurrentLike.apply(finishAnalysis.scala:106)
+	at org.apache.spark.sql.catalyst.optimizer.Optimizer$FinishAnalysis$.$anonfun$apply$1(Optimizer.scala:413)
+	at scala.collection.LinearSeqOptimized.foldLeft(LinearSeqOptimized.scala:126)
+	at scala.collection.LinearSeqOptimized.foldLeft$(LinearSeqOptimized.scala:122)
+	at scala.collection.immutable.List.foldLeft(List.scala:91)
+	at org.apache.spark.sql.catalyst.optimizer.Optimizer$FinishAnalysis$.apply(Optimizer.scala:413)
+	at org.apache.spark.sql.catalyst.optimizer.Optimizer$FinishAnalysis$.apply(Optimizer.scala:390)
+	at org.apache.spark.sql.catalyst.rules.RuleExecutor.$anonfun$execute$3(RuleExecutor.scala:216)
+	at com.databricks.spark.util.FrameProfiler$.record(FrameProfiler.scala:80)
+	at org.apache.spark.sql.catalyst.rules.RuleExecutor.$anonfun$execute$2(RuleExecutor.scala:216)
+	at scala.collection.IndexedSeqOptimized.foldLeft(IndexedSeqOptimized.scala:60)
+	at scala.collection.IndexedSeqOptimized.foldLeft$(IndexedSeqOptimized.scala:68)
+	at scala.collection.mutable.WrappedArray.foldLeft(WrappedArray.scala:38)
+	at org.apache.spark.sql.catalyst.rules.RuleExecutor.$anonfun$execute$1(RuleExecutor.scala:213)
+	at org.apache.spark.sql.catalyst.rules.RuleExecutor.$anonfun$execute$1$adapted(RuleExecutor.scala:205)
+	at scala.collection.immutable.List.foreach(List.scala:431)
+	at org.apache.spark.sql.catalyst.rules.RuleExecutor.execute(RuleExecutor.scala:205)
+	at org.apache.spark.sql.catalyst.rules.RuleExecutor.$anonfun$executeAndTrack$1(RuleExecutor.scala:184)
+	at org.apache.spark.sql.catalyst.QueryPlanningTracker$.withTracker(QueryPlanningTracker.scala:153)
+	at org.apache.spark.sql.catalyst.rules.RuleExecutor.executeAndTrack(RuleExecutor.scala:184)
+	at org.apache.spark.sql.execution.QueryExecution.$anonfun$optimizedPlan$1(QueryExecution.scala:278)
+	at com.databricks.spark.util.FrameProfiler$.record(FrameProfiler.scala:80)
+	at org.apache.spark.sql.catalyst.QueryPlanningTracker.measurePhase(QueryPlanningTracker.scala:319)
+	at org.apache.spark.sql.execution.QueryExecution.$anonfun$executePhase$3(QueryExecution.scala:349)
+	at org.apache.spark.sql.execution.QueryExecution$.withInternalError(QueryExecution.scala:774)
+	at org.apache.spark.sql.execution.QueryExecution.$anonfun$executePhase$1(QueryExecution.scala:349)
+	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:985)
+	at org.apache.spark.sql.execution.QueryExecution.executePhase(QueryExecution.scala:346)
+	at org.apache.spark.sql.execution.QueryExecution.optimizedPlan$lzycompute(QueryExecution.scala:274)
+	at org.apache.spark.sql.execution.QueryExecution.optimizedPlan(QueryExecution.scala:270)
+	at org.apache.spark.sql.execution.QueryExecution.assertOptimized(QueryExecution.scala:288)
+	at org.apache.spark.sql.execution.QueryExecution.executedPlan$lzycompute(QueryExecution.scala:307)
+	at org.apache.spark.sql.execution.QueryExecution.executedPlan(QueryExecution.scala:304)
+	at org.apache.spark.sql.execution.QueryExecution.assertExecutedPlanPrepared(QueryExecution.scala:322)
+	at org.apache.spark.sql.hive.thriftserver.ResultCollector.createExecutionPlanAndReportEvent(ResultCollector.scala:72)
+	at org.apache.spark.sql.hive.thriftserver.ResultCollector.createExecutionPlanAndReportEvent$(ResultCollector.scala:62)
+	at org.apache.spark.sql.hive.thriftserver.ArrowResultHandler.createExecutionPlanAndReportEvent(ArrowResultHandler.scala:32)
+	at org.apache.spark.sql.hive.thriftserver.ResultCollector.collectResult(ResultCollector.scala:52)
+	at org.apache.spark.sql.hive.thriftserver.ResultCollector.collectResult$(ResultCollector.scala:29)
+	at org.apache.spark.sql.hive.thriftserver.ArrowResultHandler.collectResult(ArrowResultHandler.scala:32)
+	at org.apache.spark.sql.hive.thriftserver.ArrowResultHandler$$anon$1.iterator(ArrowResultHandler.scala:66)
+	at org.apache.spark.sql.hive.thriftserver.ArrowFetchIterator.<init>(ArrowFetchIterator.scala:24)
+	at org.apache.spark.sql.hive.thriftserver.ArrowResultHandler.org$apache$spark$sql$hive$thriftserver$ArrowResultHandler$$initFromDataFrame(ArrowResultHandler.scala:62)
+	at org.apache.spark.sql.hive.thriftserver.ArrowResultHandler$.createFromDataFrame(ArrowResultHandler.scala:180)
+	at org.apache.spark.sql.hive.thriftserver.ResultHandlerFactory.createResultHandler(ResultHandlerFactory.scala:258)
+	at org.apache.spark.sql.hive.thriftserver.SparkExecuteStatementOperation.$anonfun$execute$1(SparkExecuteStatementOperation.scala:415)
+	... 19 more
+
+[0m18:38:10.109384 [debug] [MainThread]: Databricks adapter: operation-id: b"\x01\xedl'#:\x13\x8f\xa7&[\x918\xd2\x90\x8a"
+[0m18:38:10.109384 [debug] [MainThread]: On debug: Close
+[0m18:38:10.879701 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017662AF0EE0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017662AF2CE0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017662AF2440>]}
+[0m18:38:10.880702 [debug] [MainThread]: Flushing usage events
+[0m18:38:15.951879 [debug] [MainThread]: Connection 'debug' was properly closed.
+
+
+============================== 2022-11-24 18:44:52.600456 | 37e53404-cd00-491a-ad6c-6a3e6ecc6641 ==============================
+[0m18:44:52.600456 [info ] [MainThread]: Running with dbt=1.3.1
+[0m18:44:52.601365 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': 'C:\\Users\\Tedd\\.dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'config_dir': False, 'which': 'debug', 'indirect_selection': 'eager'}
+[0m18:44:52.604369 [debug] [MainThread]: Tracking: tracking
+[0m18:44:52.620368 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EB1D2C25F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EB1D2C2BF0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EB1D2C2260>]}
+[0m18:44:53.578922 [debug] [MainThread]: Executing "git --help"
+[0m18:44:53.595108 [debug] [MainThread]: Acquiring new databricks connection "debug"
+[0m18:44:53.596104 [debug] [MainThread]: Using databricks connection "debug"
+[0m18:44:53.596104 [debug] [MainThread]: On debug: select 1 as id
+[0m18:44:53.597104 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m18:44:55.935400 [debug] [MainThread]: Databricks adapter: Error while running:
+select 1 as id
+[0m18:44:55.936504 [debug] [MainThread]: Databricks adapter: <class 'databricks.sql.exc.ServerOperationError'>: Catalog 'dqa-dbt-dbks' plugin class not found: spark.sql.catalog.dqa-dbt-dbks is not defined
+[0m18:44:55.936504 [debug] [MainThread]: Databricks adapter: diagnostic-info: org.apache.hive.service.cli.HiveSQLException: Error running query: org.apache.spark.sql.connector.catalog.CatalogNotFoundException: Catalog 'dqa-dbt-dbks' plugin class not found: spark.sql.catalog.dqa-dbt-dbks is not defined
+	at org.apache.spark.sql.hive.thriftserver.HiveThriftServerErrors$.runningQueryError(HiveThriftServerErrors.scala:49)
+	at org.apache.spark.sql.hive.thriftserver.SparkExecuteStatementOperation.$anonfun$execute$1(SparkExecuteStatementOperation.scala:443)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at com.databricks.unity.EmptyHandle$.runWith(UCSHandle.scala:41)
+	at org.apache.spark.sql.hive.thriftserver.SparkExecuteStatementOperation.org$apache$spark$sql$hive$thriftserver$SparkExecuteStatementOperation$$execute(SparkExecuteStatementOperation.scala:356)
+	at org.apache.spark.sql.hive.thriftserver.SparkExecuteStatementOperation$$anon$2$$anon$3.$anonfun$run$2(SparkExecuteStatementOperation.scala:269)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at org.apache.spark.sql.hive.thriftserver.ThriftLocalProperties.withLocalProperties(ThriftLocalProperties.scala:149)
+	at org.apache.spark.sql.hive.thriftserver.ThriftLocalProperties.withLocalProperties$(ThriftLocalProperties.scala:49)
+	at org.apache.spark.sql.hive.thriftserver.SparkExecuteStatementOperation.withLocalProperties(SparkExecuteStatementOperation.scala:54)
+	at org.apache.spark.sql.hive.thriftserver.SparkExecuteStatementOperation$$anon$2$$anon$3.run(SparkExecuteStatementOperation.scala:247)
+	at org.apache.spark.sql.hive.thriftserver.SparkExecuteStatementOperation$$anon$2$$anon$3.run(SparkExecuteStatementOperation.scala:232)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:422)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1878)
+	at org.apache.spark.sql.hive.thriftserver.SparkExecuteStatementOperation$$anon$2.run(SparkExecuteStatementOperation.scala:281)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: org.apache.spark.sql.connector.catalog.CatalogNotFoundException: Catalog 'dqa-dbt-dbks' plugin class not found: spark.sql.catalog.dqa-dbt-dbks is not defined
+	at org.apache.spark.sql.errors.QueryExecutionErrors$.catalogPluginClassNotFoundError(QueryExecutionErrors.scala:1791)
+	at org.apache.spark.sql.connector.catalog.Catalogs$.load(Catalogs.scala:63)
+	at org.apache.spark.sql.connector.catalog.SecureCatalogManager.assertCatalogLoadable(SecureCatalogManager.scala:44)
+	at org.apache.spark.sql.connector.catalog.SecureCatalogManager.assertCatalogLoadable$(SecureCatalogManager.scala:40)
+	at org.apache.spark.sql.connector.catalog.CatalogManager.assertCatalogLoadable(CatalogManager.scala:40)
+	at org.apache.spark.sql.connector.catalog.CatalogManager.catalog(CatalogManager.scala:54)
+	at com.databricks.sql.DatabricksCatalogManager.catalog(DatabricksCatalogManager.scala:96)
+	at org.apache.spark.sql.connector.catalog.CatalogManager.currentCatalog(CatalogManager.scala:127)
+	at com.databricks.sql.DatabricksCatalogManager.currentCatalog(DatabricksCatalogManager.scala:114)
+	at org.apache.spark.sql.connector.catalog.CatalogManager.currentNamespace(CatalogManager.scala:98)
+	at com.databricks.sql.DatabricksCatalogManager.currentNamespace(DatabricksCatalogManager.scala:147)
+	at org.apache.spark.sql.catalyst.optimizer.ReplaceCurrentLike.apply(finishAnalysis.scala:109)
+	at org.apache.spark.sql.catalyst.optimizer.ReplaceCurrentLike.apply(finishAnalysis.scala:106)
+	at org.apache.spark.sql.catalyst.optimizer.Optimizer$FinishAnalysis$.$anonfun$apply$1(Optimizer.scala:413)
+	at scala.collection.LinearSeqOptimized.foldLeft(LinearSeqOptimized.scala:126)
+	at scala.collection.LinearSeqOptimized.foldLeft$(LinearSeqOptimized.scala:122)
+	at scala.collection.immutable.List.foldLeft(List.scala:91)
+	at org.apache.spark.sql.catalyst.optimizer.Optimizer$FinishAnalysis$.apply(Optimizer.scala:413)
+	at org.apache.spark.sql.catalyst.optimizer.Optimizer$FinishAnalysis$.apply(Optimizer.scala:390)
+	at org.apache.spark.sql.catalyst.rules.RuleExecutor.$anonfun$execute$3(RuleExecutor.scala:216)
+	at com.databricks.spark.util.FrameProfiler$.record(FrameProfiler.scala:80)
+	at org.apache.spark.sql.catalyst.rules.RuleExecutor.$anonfun$execute$2(RuleExecutor.scala:216)
+	at scala.collection.IndexedSeqOptimized.foldLeft(IndexedSeqOptimized.scala:60)
+	at scala.collection.IndexedSeqOptimized.foldLeft$(IndexedSeqOptimized.scala:68)
+	at scala.collection.mutable.WrappedArray.foldLeft(WrappedArray.scala:38)
+	at org.apache.spark.sql.catalyst.rules.RuleExecutor.$anonfun$execute$1(RuleExecutor.scala:213)
+	at org.apache.spark.sql.catalyst.rules.RuleExecutor.$anonfun$execute$1$adapted(RuleExecutor.scala:205)
+	at scala.collection.immutable.List.foreach(List.scala:431)
+	at org.apache.spark.sql.catalyst.rules.RuleExecutor.execute(RuleExecutor.scala:205)
+	at org.apache.spark.sql.catalyst.rules.RuleExecutor.$anonfun$executeAndTrack$1(RuleExecutor.scala:184)
+	at org.apache.spark.sql.catalyst.QueryPlanningTracker$.withTracker(QueryPlanningTracker.scala:153)
+	at org.apache.spark.sql.catalyst.rules.RuleExecutor.executeAndTrack(RuleExecutor.scala:184)
+	at org.apache.spark.sql.execution.QueryExecution.$anonfun$optimizedPlan$1(QueryExecution.scala:278)
+	at com.databricks.spark.util.FrameProfiler$.record(FrameProfiler.scala:80)
+	at org.apache.spark.sql.catalyst.QueryPlanningTracker.measurePhase(QueryPlanningTracker.scala:319)
+	at org.apache.spark.sql.execution.QueryExecution.$anonfun$executePhase$3(QueryExecution.scala:349)
+	at org.apache.spark.sql.execution.QueryExecution$.withInternalError(QueryExecution.scala:774)
+	at org.apache.spark.sql.execution.QueryExecution.$anonfun$executePhase$1(QueryExecution.scala:349)
+	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:985)
+	at org.apache.spark.sql.execution.QueryExecution.executePhase(QueryExecution.scala:346)
+	at org.apache.spark.sql.execution.QueryExecution.optimizedPlan$lzycompute(QueryExecution.scala:274)
+	at org.apache.spark.sql.execution.QueryExecution.optimizedPlan(QueryExecution.scala:270)
+	at org.apache.spark.sql.execution.QueryExecution.assertOptimized(QueryExecution.scala:288)
+	at org.apache.spark.sql.execution.QueryExecution.executedPlan$lzycompute(QueryExecution.scala:307)
+	at org.apache.spark.sql.execution.QueryExecution.executedPlan(QueryExecution.scala:304)
+	at org.apache.spark.sql.execution.QueryExecution.assertExecutedPlanPrepared(QueryExecution.scala:322)
+	at org.apache.spark.sql.hive.thriftserver.ResultCollector.createExecutionPlanAndReportEvent(ResultCollector.scala:72)
+	at org.apache.spark.sql.hive.thriftserver.ResultCollector.createExecutionPlanAndReportEvent$(ResultCollector.scala:62)
+	at org.apache.spark.sql.hive.thriftserver.ArrowResultHandler.createExecutionPlanAndReportEvent(ArrowResultHandler.scala:32)
+	at org.apache.spark.sql.hive.thriftserver.ResultCollector.collectResult(ResultCollector.scala:52)
+	at org.apache.spark.sql.hive.thriftserver.ResultCollector.collectResult$(ResultCollector.scala:29)
+	at org.apache.spark.sql.hive.thriftserver.ArrowResultHandler.collectResult(ArrowResultHandler.scala:32)
+	at org.apache.spark.sql.hive.thriftserver.ArrowResultHandler$$anon$1.iterator(ArrowResultHandler.scala:66)
+	at org.apache.spark.sql.hive.thriftserver.ArrowFetchIterator.<init>(ArrowFetchIterator.scala:24)
+	at org.apache.spark.sql.hive.thriftserver.ArrowResultHandler.org$apache$spark$sql$hive$thriftserver$ArrowResultHandler$$initFromDataFrame(ArrowResultHandler.scala:62)
+	at org.apache.spark.sql.hive.thriftserver.ArrowResultHandler$.createFromDataFrame(ArrowResultHandler.scala:180)
+	at org.apache.spark.sql.hive.thriftserver.ResultHandlerFactory.createResultHandler(ResultHandlerFactory.scala:258)
+	at org.apache.spark.sql.hive.thriftserver.SparkExecuteStatementOperation.$anonfun$execute$1(SparkExecuteStatementOperation.scala:415)
+	... 19 more
+
+[0m18:44:55.937414 [debug] [MainThread]: Databricks adapter: operation-id: b'\x01\xedl(\x16\xe1\x19(\x84\x034a\x9c\xc6\x85\xf5'
+[0m18:44:55.937414 [debug] [MainThread]: On debug: Close
+[0m18:44:56.057152 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EB2DA0CE80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EB2DA0ECB0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EB2DA0E410>]}
+[0m18:44:56.058158 [debug] [MainThread]: Flushing usage events
+[0m18:45:00.589063 [debug] [MainThread]: Connection 'debug' was properly closed.
