@@ -232,3 +232,64 @@ Caused by: org.apache.spark.sql.connector.catalog.CatalogNotFoundException: Cata
 [0m18:44:56.057152 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EB2DA0CE80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EB2DA0ECB0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EB2DA0E410>]}
 [0m18:44:56.058158 [debug] [MainThread]: Flushing usage events
 [0m18:45:00.589063 [debug] [MainThread]: Connection 'debug' was properly closed.
+
+
+============================== 2022-11-25 16:27:10.088037 | ccfe3f07-e81e-4944-bf3a-17b43b851817 ==============================
+[0m16:27:10.088037 [info ] [MainThread]: Running with dbt=1.3.1
+[0m16:27:10.094018 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': 'C:\\Users\\Tedd\\.dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'project_name': 'dqa-dbt-databricks', 'skip_profile_setup': False, 'which': 'init', 'indirect_selection': 'eager'}
+[0m16:27:10.096035 [debug] [MainThread]: Tracking: tracking
+[0m16:27:10.123576 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017E09DF25C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017E09DF2DD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017E09DF28C0>]}
+[0m16:27:35.208826 [debug] [MainThread]: Starter project path: C:\Users\Tedd\.virtualenvs\dqa-dbt-databricks-WuttffiD\lib\site-packages\dbt\include\starter_project
+[0m16:29:50.915249 [info ] [MainThread]: Profile dqa_dbt_databricks_projects written to C:\Users\Tedd\.dbt\profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m16:29:50.917273 [info ] [MainThread]: 
+Your new dbt project "dqa_dbt_databricks_projects" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m16:29:50.921254 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017E09DF20B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017E09DF1180>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017E09DF2FE0>]}
+[0m16:29:50.922252 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2022-11-25 16:30:27.066008 | cba70789-f892-424f-9c0d-978193900595 ==============================
+[0m16:30:27.066008 [info ] [MainThread]: Running with dbt=1.3.1
+[0m16:30:27.067009 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': 'C:\\Users\\Tedd\\.dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'config_dir': True, 'which': 'debug', 'indirect_selection': 'eager'}
+[0m16:30:27.068008 [debug] [MainThread]: Tracking: tracking
+[0m16:30:27.088965 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000014DD22329B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000014DD2233070>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000014DD2232B60>]}
+[0m16:30:27.089940 [info ] [MainThread]: To view your profiles.yml file, run:
+
+start C:\Users\Tedd\.dbt
+[0m16:30:27.093945 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000014DD2233070>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000014DD2232B60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000014DD2232FE0>]}
+[0m16:30:27.095941 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2022-11-25 16:31:48.021014 | 4756a70e-f66f-49d1-a018-ceabf06060c1 ==============================
+[0m16:31:48.021014 [info ] [MainThread]: Running with dbt=1.3.1
+[0m16:31:48.023011 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': 'C:\\Users\\Tedd\\.dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'config_dir': False, 'which': 'debug', 'indirect_selection': 'eager'}
+[0m16:31:48.023011 [debug] [MainThread]: Tracking: tracking
+[0m16:31:48.043017 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026E1F9B28C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026E1F9B3190>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026E1F9B2BC0>]}
+[0m16:31:49.356252 [debug] [MainThread]: Executing "git --help"
+[0m16:31:49.379254 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026E300EDC00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026E300EE8C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026E300EFCD0>]}
+[0m16:31:49.380254 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2022-11-25 18:06:10.750939 | 4a5b3869-2c1d-4995-b0a4-73a4b2ec2d46 ==============================
+[0m18:06:10.750939 [info ] [MainThread]: Running with dbt=1.3.1
+[0m18:06:10.753156 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': 'C:\\Users\\Tedd\\.dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'config_dir': True, 'which': 'debug', 'indirect_selection': 'eager'}
+[0m18:06:10.754166 [debug] [MainThread]: Tracking: tracking
+[0m18:06:10.785018 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E9A40F2980>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E9A40F3250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E9A40F2D40>]}
+[0m18:06:10.787000 [info ] [MainThread]: To view your profiles.yml file, run:
+
+start C:\Users\Tedd\.dbt
+[0m18:06:10.788999 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E9A40F3250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E9A40F2D40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E9A40F31C0>]}
+[0m18:06:10.792005 [debug] [MainThread]: Flushing usage events
