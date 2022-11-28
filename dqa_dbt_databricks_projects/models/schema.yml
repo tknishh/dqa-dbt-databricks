@@ -1,0 +1,24 @@
+version: 2
+
+models:
+  - name: bronze_orders
+    columns:
+      - name: order_id
+        tests:
+          - unique
+          - not_null
+  - name: silver_orders
+    columns:
+      - name: order_id
+        tests:
+          - unique
+          - not_null
+          - relationships:
+            to: ref('bronze_orders')
+            field: order_id 
+  - name: gold_orders
+    columns:
+      - name: order_count
+        tests:
+          - accepted_values:
+              values: [100]
